@@ -7,6 +7,12 @@
     <title>Shoots, 404 !</title>
     <!-- <link rel="stylesheet" href="css/404.css"> -->
     <style>@import "https://fonts.googleapis.com/css?family=VT323";
+        html {
+
+            overflow: hidden;
+
+        }
+        
         body,
         h1,
         h2,
@@ -73,17 +79,77 @@
         .bsod .nav .link:hover, .bsod .nav .link:focus {
           background: #aaaaaa;
           color: #0414a7;
-        }</style>
+        }
+        .hidden {
+          color: #0414a7;
+          transition: all 0.5s ease;
+        }
+        .hidden:hover {
+          color: #aaaaaa;
+        }
+        .hidden:focus {
+          color: #aaaaaa;
+        }
+        .rainbow:hover {
+  animation: rainbow 2.5s linear;
+  animation-iteration-count: infinite;
+}
+        @keyframes rainbow {
+  100%,
+  0% {
+    color: rgb(255, 0, 0);
+  }
+  8% {
+    color: rgb(255, 127, 0);
+  }
+  16% {
+    color: rgb(255, 255, 0);
+  }
+  25% {
+    color: rgb(127, 255, 0);
+  }
+  33% {
+    color: rgb(0, 255, 0);
+  }
+  41% {
+    color: rgb(0, 255, 127);
+  }
+  50% {
+    color: rgb(0, 255, 255);
+  }
+  58% {
+    color: rgb(0, 127, 255);
+  }
+  66% {
+    color: rgb(0, 0, 255);
+  }
+  75% {
+    color: rgb(127, 0, 255);
+  }
+  83% {
+    color: rgb(255, 0, 255);
+  }
+  91% {
+    color: rgb(255, 0, 127);
+  }
+}
+
+        
+        </style>
+
 </head>
-<body>
+<body>      
+
     <main class="bsod container">
-        <h1 class="neg title"><span class="bg">Error - 404</span></h1>
+        <h1 class="neg title"><span class="bg">Error - <span class="rainbow"> 404 </span></span></h1>
         <p>An error has occured, to continue:</p>
-        <p>* Return to our homepage.<br />
-        * Send us an e-mail about this error and try later.</p>
+        <p>* Return to homepage.<br />
+        * Send an e-mail about this error and try later.</p>
         <nav class="nav">
-          <a href="https://www.eytane.fr" class="link">index</a>&nbsp;|&nbsp;<a href="postmaster@eytane.fr" class="link">webmaster</a>
+          <a href="https://www.eytane.fr" class="link">index</a>&nbsp;|&nbsp;<a href="mailto:postmaster@eytane.fr" class="link">webmaster</a>
         </nav>
+        <a class="hidden" href="">Take me somewhere</a>
       </main>
+
 </body>
 </html>
